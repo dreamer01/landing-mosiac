@@ -1,3 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,600;10..48,700;10..48,800&display=swap');
+
+
+.page {
+  --light: #fcf6e8;
+  --yellow: #fdc449;
+  --pink: #feccb3;
+  --teal: #9bd3d0;
+  --lightGrey: #545454;
+  --grey: #373737;
+  --text: #222344;
+
+  background-color: var(--light);
+  color: var(--text);
+}
+
+.page>* {
+  box-sizing: border-box;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.main {
+  padding: 40px 120px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 240px;
+}
+
+menubar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-radius: 80px;
+  padding: 4px 16px;
+  font-size: 18px;
+  border: 1.5px solid transparent;
+  margin-left: 4px;
+}
+
+nav:hover {
+  border: 1.5px solid var(--grey);
+}
+
+.active {
+  border: 1.5px solid var(--grey);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  padding: 10px 32px;
+  height: 60px;
+  border-radius: 18px;
+  background-color: var(--grey);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  cursor: pointer;
+}
+
+.heroView {
+  display: flex;
+  align-items: center;
+}
+
+.callout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.inlineView {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
 .heading {
-  color: coral;
+  font-size: 84px;
+  line-height: 1;
+  margin: 0px;
+}
+
+.arrowIcon {
+  height: 80px;
+  margin-left: 24px;
+}
+
+.subText {
+  width: 60%;
+  font-size: 20px;
+  color: var(--lightGrey);
+  line-height: 1.5;
+  margin: 50px 0px 30px 0px;
+}
+
+.primaryBtn {
+  background-color: var(--yellow);
+  color: var(--grey);
+  width: fit-content;
+  border: 1.5px solid var(--grey);
+  box-shadow: 6px 6px var(--grey);
+}
+
+.nextIcon {
+  height: 24px;
+  width: 24px;
+  margin-left: 12px;
+}
+
+.heroImg {
+  flex: 1;
+}
+
+.collab {
+  margin-top: 100px;
+  background-color: var(--grey);
+  height: 150px;
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px;
+  text-align: center;
+}
+
+.serviceHeading {
+  width: 75%;
+  font-size: 64px;
+  margin: 0px;
+}
+
+.serviceMessage {
+  width: 50%;
+  font-size: 20px;
+  color: var(--lightGrey);
+}
+
+.servicesView {
+  display: flex;
+  width: 100%;
+  gap: 80px;
+  margin: 80px 0px;
+  height: 475px;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex: 1;
+  flex-grow: 1;
+  height: 100%;
+  border-radius: 18px;
+  padding: 60px 30px;
+}
+
+.serviceCard:hover {
+  border: 1.5px solid var(--grey);
+  box-shadow: 8px 8px var(--grey);
+}
+
+.serviceTitle {
+  font-size: 36px;
+}
+
+.serviceText {
+  line-height: 1.5;
+  font-size: 20px;
+  color: var(--lightGrey);
+  margin: 0px;
+}
+
+.serviceIconView {
+  width: 100px;
+  height: 100px;
+  border: 1.5px solid var(--grey);
+  border-radius: 100px;
+  background-color: white;
+}
+
+.mobile {
+  background-color: var(--teal);
+}
+
+.web {
+  background-color: var(--pink);
+}
+
+.customer {
+  background-color: var(--yellow);
+}
+
+.whyUsView {
+  height: 100vh;
+  background-color: var(--yellow);
+  display: flex;
+  flex: 1;
+}
+
+.whyImg {
+  flex: 1.25
+}
+
+.whyContent {
+  flex: 1;
+  padding: 40px;
+}
+
+.whyContent>.heading {
+  color: white;
+}
+
+.whyInfoSection {
+  margin-top: 24px;
+}
+
+.whyInfoSection .highlight {
+  letter-spacing: 4px;
+  font-size: 84px;
+  margin: 0px;
+}
+
+.whyInfoSection .title {
+  width: 25%;
+  font-size: 28px;
+  margin: 0px;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+.whyInfoSection .text {
+  width: 80%;
+  font-size: 18px;
 }
