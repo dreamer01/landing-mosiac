@@ -1,0 +1,87 @@
+/*
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+.page {
+  --prussian-blue: #003049ff;
+  --fire-engine-red: #d62828ff;
+  --orange-wheel: #f77f00ff;
+  --xanthous: #fcbf49ff;
+  --vanilla: #eae2b7ff;
+
+  color: var(--prussian-blue);
+  background-color: var(--vanilla);
+  height: 100vh;
+}
+
+.page>* {
+  box-sizing: border-box;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+
+.main {
+  font-family: 'Chakra Petch', sans-serif;
+  max-width: 786px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--orange-wheel);
+  padding-left: 12px;
+}
+
+.s2dLogo {
+  width: 200px;
+  height: auto;
+}
+
+.hero {
+  margin: 40px 0px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 64px;
+  margin: 0px;
+}
+
+.accent {
+  color: var(--fire-engine-red);
+}
+
+.info {
+  font-size: 24px;
+}
+
+@media (min-width:0px) and (max-width: 786px) {
+  .main {
+    padding: 0px 20px;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .info {
+    font-size: 24px;
+  }
+}
