@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import Styles from './main.module.css';
+import { NextIcon, PrevIcon } from './Icons';
 
 const SERVICES = [
   {
@@ -42,7 +44,63 @@ const WHY_US = [
   },
 ];
 
+const PROJECTS = [
+  {
+    id: 'web-design',
+    tag: 'Web design',
+    color: '#9bd3d0',
+    title: 'Web design project title goes here',
+    cover:
+      'https://images.unsplash.com/photo-1576595580361-90a855b84b20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHVpJTIwZGVzaWdufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=40',
+    text: `We provide you with a customized website design that's perfect for your business or personal site.`,
+  },
+  {
+    id: 'web-dev',
+    tag: 'Development',
+    color: '#feccb3',
+    title: 'Development project title goes here',
+    cover:
+      'https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=40',
+    text: `We will develop an online tool, to create a unique widget with a specific functionality for your business website.`,
+  },
+  {
+    id: 'ecomm',
+    tag: 'Ecommerce',
+    color: '#fdc449',
+    title: 'Ecommerce project title goes here',
+    cover:
+      'https://images.unsplash.com/photo-1574271143515-5cddf8da19be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1546&q=40',
+    text: `We provide assistance to customers with everything from making online purchase decisions.`,
+  },
+];
+
+const TESTIMONIALS = [
+  {
+    id: 1,
+    name: 'Christiana Matt',
+    pic: '/assets/neo-brutalism/christina.png',
+    position: 'CMO of Oval',
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+  },
+  {
+    id: 2,
+    name: 'Olga Zara',
+    pic: '/assets/neo-brutalism/olga.png',
+    position: 'CBO of Rosey',
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+  },
+  {
+    id: 3,
+    name: 'Yogendra Singh',
+    pic: '/assets/neo-brutalism/mitchell.png',
+    position: 'CEO of Rabta',
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+  },
+];
+
 const Page = () => {
+  const [current, setCurrent] = useState(0);
+
   const renderService = ({ id, title, logo, text }) => (
     <div key={id} className={`${Styles.serviceCard} ${Styles[id]}`}>
       <div className={Styles.serviceIconView}>
@@ -61,6 +119,62 @@ const Page = () => {
       </div>
       <p className={Styles.text}>{text}</p>
     </section>
+  );
+
+  const renderProjects = ({ id, title, cover, text, tag, color }) => (
+    <div key={id} className={Styles.projectsList}>
+      <div className={Styles.projectContent}>
+        <span style={{ backgroundColor: color }} className={Styles.tag}>
+          {tag}
+        </span>
+        <h3 className={Styles.projectTitle}>{title}</h3>
+        <p className={Styles.subText}>{text}</p>
+        <button className={Styles.seeProjectBtn}>See Full Project </button>
+      </div>
+      <div
+        style={{ boxShadow: `20px 20px ${color}` }}
+        className={Styles.coverView}
+      >
+        <img className={Styles.projectCover} src={cover} />
+      </div>
+    </div>
+  );
+
+  const renderTestimonial = ({ pic, name, position, text }) => (
+    <div className={Styles.carouselView}>
+      <div className={Styles.picView}>
+        <img className={Styles.profilePic} src={pic} />
+      </div>
+      <div style={{ flex: 1 }}>
+        <h3 className={Styles.quote}>❝{text}❞</h3>
+        <div className={Styles.header}>
+          <div>
+            <p className={Styles.name}>{name}</p>
+            <p className={Styles.label}>{position}</p>
+          </div>
+          <div className={Styles.inlineView}>
+            <button
+              className={`${Styles.stepBtn} ${Styles.prev}`}
+              onClick={() => {
+                if (current === 0) setCurrent(TESTIMONIALS.length - 1);
+                else setCurrent((c) => c - 1);
+              }}
+            >
+              <PrevIcon />
+            </button>
+            <button
+              className={`${Styles.stepBtn} ${Styles.next}`}
+              onClick={() => {
+                if (current === TESTIMONIALS.length - 1) setCurrent(0);
+                else setCurrent((c) => c + 1);
+              }}
+            >
+              <NextIcon />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 
   return (
@@ -115,12 +229,71 @@ const Page = () => {
         </section>
       </div>
       <div className={Styles.whyUsView}>
-        <div className={Styles.whyImg}>Why Img</div>
+        <div className={Styles.whyImgView}>
+          <img
+            className={Styles.whyImg}
+            src='/assets/neo-brutalism/sahil.png'
+          />
+        </div>
         <div className={Styles.whyContent}>
           <h1 className={Styles.heading}>Why us?</h1>
           <div>{WHY_US.map(renderWhyUsInfo)}</div>
         </div>
       </div>
+      <div className={Styles.projectView}>
+        <h1 className={Styles.heading}>See Our Projects</h1>
+        <p className={Styles.subText}>
+          Check out the cool work we've done together. Every brand is unique
+          with a different products, target audience and business goal.
+        </p>
+        {PROJECTS.map(renderProjects)}
+        <button style={{ margin: '50px auto' }} className={Styles.primaryBtn}>
+          See All Projects
+          <img
+            className={Styles.nextIcon}
+            src='./assets/neo-brutalism/next.png'
+          />
+        </button>
+      </div>
+      <div className={Styles.testimonialsView}>
+        <h2 className={Styles.heading}>What Our Client Say</h2>
+        <div>{renderTestimonial(TESTIMONIALS[current])}</div>
+      </div>
+      <footer>
+        <div className={Styles.footerInfo}>
+          <div style={{ flex: 1 }}>
+            <img className={Styles.logo} src='./s2d-logo.png' />
+            <p>
+              We help the most exciting brands unlock growth through carefully
+              crafted paid media campaigns and digital experiences
+            </p>
+          </div>
+          <div style={{ flex: 0.5 }}>
+            <p>Products</p>
+            <li>Overview</li>
+            <li>Marketplace</li>
+            <li>Workers</li>
+          </div>
+          <div style={{ flex: 0.5 }}>
+            <p>Resources</p>
+            <li>Blog</li>
+            <li>FAQs</li>
+            <li>ROI Calculator</li>
+          </div>
+          <div style={{ flex: 1 }}>
+            Subscribe to our newsletter
+            <p>Stay updated</p>
+            <div>
+              <input />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <div className={Styles.header}>
+          <p> &copy; 2023 Stud2Design. All Rights Reserved. </p>
+          <div>Social Icons</div>
+        </div>
+      </footer>
     </div>
   );
 };
