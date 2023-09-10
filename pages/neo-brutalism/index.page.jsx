@@ -1,24 +1,24 @@
 import { useState } from 'react';
 import Styles from './main.module.css';
-import { NextIcon, PrevIcon } from './Icons';
+import { GoArrow, Growth, Mobile, NextIcon, PrevIcon, Web } from './Icons';
 
 const SERVICES = [
   {
     id: 'mobile',
     title: 'Mobile Experience',
-    logo: '',
+    logo: Mobile,
     text: 'building hybrid mobile application for android and iOS users across the world with high performance and rich ui/ux',
   },
   {
     id: 'web',
     title: 'Web Experience',
-    logo: '',
+    logo: Web,
     text: 'creating responsive website allowing user to access the product instantly without app friction on any desktop/mobile device',
   },
   {
     id: 'customer',
     title: 'Customer Growth',
-    logo: '',
+    logo: Growth,
     text: 'seo rich apps to increase audience reach and retention, performance gain with use of adaptive tech for poor network to offline support',
   },
 ];
@@ -77,23 +77,23 @@ const PROJECTS = [
 const TESTIMONIALS = [
   {
     id: 1,
-    name: 'Christiana Matt',
-    pic: '/assets/neo-brutalism/christina.png',
-    position: 'CMO of Oval',
-    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
-  },
-  {
-    id: 2,
     name: 'Olga Zara',
     pic: '/assets/neo-brutalism/olga.png',
     position: 'CBO of Rosey',
     text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
   },
   {
-    id: 3,
+    id: 2,
     name: 'Yogendra Singh',
     pic: '/assets/neo-brutalism/mitchell.png',
     position: 'CEO of Rabta',
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+  },
+  {
+    id: 3,
+    name: 'Christiana Matt',
+    pic: '/assets/neo-brutalism/christina.png',
+    position: 'CMO of Oval',
     text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
   },
 ];
@@ -101,10 +101,10 @@ const TESTIMONIALS = [
 const Page = () => {
   const [current, setCurrent] = useState(0);
 
-  const renderService = ({ id, title, logo, text }) => (
+  const renderService = ({ id, title, logo: Logo, text }) => (
     <div key={id} className={`${Styles.serviceCard} ${Styles[id]}`}>
       <div className={Styles.serviceIconView}>
-        <img src={logo} />
+        <Logo className={Styles.serviceIcon} />
       </div>
       <h3 className={Styles.serviceTitle}>{title}</h3>
       <p className={Styles.serviceText}>{text}</p>
@@ -195,10 +195,7 @@ const Page = () => {
             <h1 className={Styles.heading}>Grow Your Business With</h1>
             <div className={Styles.inlineView}>
               <h1 className={Styles.heading}>Us</h1>
-              <img
-                className={Styles.arrowIcon}
-                src='./assets/neo-brutalism/goarrow.png'
-              />
+              <GoArrow className={Styles.arrowIcon} />
             </div>
             <p className={Styles.subText}>
               Developing and designing the digital solutions, to reach your true
@@ -212,7 +209,12 @@ const Page = () => {
               />
             </button>
           </div>
-          <div className={Styles.heroImg}>Img</div>
+          <div className={Styles.heroImgView}>
+            <img
+              className={Styles.heroImg}
+              src='/assets/neo-brutalism/heroImg.png'
+            />
+          </div>
         </section>
       </main>
       <div className={Styles.collab}>Collabs</div>
@@ -262,35 +264,35 @@ const Page = () => {
       <footer>
         <div className={Styles.footerInfo}>
           <div style={{ flex: 1 }}>
-            <img className={Styles.logo} src='./s2d-logo.png' />
-            <p>
+            <img className={Styles.logo} src='./s2d-white.png' />
+            <p className={Styles.footerText}>
               We help the most exciting brands unlock growth through carefully
               crafted paid media campaigns and digital experiences
             </p>
           </div>
-          <div style={{ flex: 0.5 }}>
-            <p>Products</p>
+          <div className={Styles.listView}>
+            <p className={Styles.heading}>Products</p>
             <li>Overview</li>
             <li>Marketplace</li>
             <li>Workers</li>
           </div>
-          <div style={{ flex: 0.5 }}>
-            <p>Resources</p>
+          <div className={Styles.listView}>
+            <p className={Styles.heading}>Resources</p>
             <li>Blog</li>
             <li>FAQs</li>
             <li>ROI Calculator</li>
           </div>
           <div style={{ flex: 1 }}>
-            Subscribe to our newsletter
+            <p className={Styles.heading}>Subscribe to our newsletter</p>
             <p>Stay updated</p>
-            <div>
-              <input />
-              <button>Subscribe</button>
+            <div className={Styles.inputView}>
+              <input placeholder='Enter your email' />
+              <button className={Styles.subBtn}>Subscribe</button>
             </div>
           </div>
         </div>
         <div className={Styles.header}>
-          <p> &copy; 2023 Stud2Design. All Rights Reserved. </p>
+          <p>&copy; 2023 Stud2Design. All Rights Reserved. </p>
           <div>Social Icons</div>
         </div>
       </footer>

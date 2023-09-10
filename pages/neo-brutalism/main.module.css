@@ -17,6 +17,7 @@
 .page>* {
   box-sizing: border-box;
   font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
 }
 
 .main {
@@ -127,8 +128,15 @@ button {
   margin-left: 12px;
 }
 
-.heroImg {
+.heroImgView {
   flex: 1;
+  text-align: center;
+}
+
+.heroImg {
+  height: 500px;
+  margin-top: 100px;
+  object-fit: contain;
 }
 
 .collab {
@@ -193,11 +201,20 @@ button {
 }
 
 .serviceIconView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
   border: 1.5px solid var(--grey);
   border-radius: 100px;
   background-color: white;
+  overflow: hidden;
+}
+
+.serviceIcon {
+  width: 60px;
+  height: 60px;
 }
 
 .mobile {
@@ -337,13 +354,13 @@ button {
 
 .carouselView {
   display: flex;
-  padding: 150px 80px 0px 0px;
+  padding: 200px 80px 0px 0px;
 }
 
 .picView {
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   background-color: var(--pink);
   border: 2px solid var(--grey);
   border-radius: 15px;
@@ -355,7 +372,7 @@ button {
   bottom: 0px;
   left: -5%;
   width: 105%;
-  height: 120%;
+  height: 150%;
   object-fit: cover;
 }
 
@@ -404,9 +421,53 @@ footer {
 }
 
 .footerInfo {
+  box-sizing: initial;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-bottom: 80px;
+  align-items: flex-start;
+  padding-bottom: 100px;
   border-bottom: 1.5px solid white;
+  line-height: 1.5;
+  color: #efefef;
+  height: 175px;
+}
+
+.footerInfo .heading {
+  font-size: 24px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.footerText {}
+
+.listView {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: 40px;
+  height: 100%;
+}
+
+input {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  padding-left: 16px;
+}
+
+.subBtn {
+  background-color: var(--yellow);
+  border: 1px solid var(--grey);
+  color: var(--grey);
+}
+
+.inputView {
+  display: flex;
+  padding: 12px;
+  background: white;
+  justify-content: space-between;
+  border-radius: 30px;
 }
