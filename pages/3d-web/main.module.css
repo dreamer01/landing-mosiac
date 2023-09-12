@@ -3,9 +3,13 @@
 .page {
   --purple: #6246E4;
   --yellow: #FCBC14;
+  --lightYellow: #FCBC1475;
   --green: #9ACF61;
+  --lightGreen: #9ACF6175;
   --pink: #F990B6;
+  --lightPink: #F990B675;
   --blue: #92BBFC;
+  --lightBlue: #92BBFC75;
   --lightGrey: #F7FAFD;
   --grey: #373737;
   --text: #2D2D2D;
@@ -18,6 +22,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+  line-height: 1;
 }
 
 .hero {
@@ -65,7 +70,7 @@ button {
   font-size: 20px;
 }
 
-.heroContent {
+.sectionContainer {
   display: flex;
   align-items: center;
   margin: 40px 120px;
@@ -94,4 +99,95 @@ button {
 .heroImg {
   width: 100%;
   translate: 50px;
+}
+
+.clients {
+  height: 120px;
+  background-color: var(--lightGrey);
+}
+
+.servicesView {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  margin: 100px 200px;
+
+}
+
+.serviceCard {
+  flex: 1;
+  background-color: var(--lightGrey);
+  border-radius: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.serviceImg {
+  height: 100px;
+  margin-bottom: 40px;
+}
+
+.serviceText {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.whyView {
+  margin: 180px 120px;
+}
+
+.whyImgView {
+  flex: 1;
+  text-align: center;
+}
+
+.whyImg {
+  width: 75%;
+}
+
+.whyContent {
+  flex: 1;
+}
+
+.whyHeading {
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.whyText {
+  width: 80%;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.whyPoints {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.whyNumbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: var(--lightYellow);
+  box-shadow: 0px 30px var(--lightGrey);
+  margin-right: 40px;
+}
+
+.second {
+  background-color: var(--lightBlue);
+}
+
+.third {
+  background-color: var(--lightPink);
 }
