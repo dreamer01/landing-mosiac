@@ -98,7 +98,7 @@ const TESTIMONIALS = [
   },
 ];
 
-const Page = () => {
+export const Page = () => {
   const [current, setCurrent] = useState(0);
 
   const renderService = ({ id, title, logo: Logo, text }) => (
@@ -299,5 +299,3 @@ const Page = () => {
     </div>
   );
 };
-
-export { Page };

@@ -22,6 +22,7 @@ const Page = () => {
         </section>
         <section>
           <a href='/neo-brutalism'>Neo Brutalism</a>
+          <a href='/3d-web'>3D Web</a>
         </section>
       </main>
     </div>
