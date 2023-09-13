@@ -3,13 +3,14 @@
 .page {
   --purple: #6246E4;
   --yellow: #FCBC14;
-  --lightYellow: #FCBC1475;
+  --lightYellow: #FCBC1495;
   --green: #9ACF61;
-  --lightGreen: #9ACF6175;
+  --lightGreen: #9ACF6195;
   --pink: #F990B6;
-  --lightPink: #F990B675;
+  --lightPink: #F990B695;
+  --teal: #68DEF095;
   --blue: #92BBFC;
-  --lightBlue: #92BBFC75;
+  --lightBlue: #92BBFC95;
   --lightGrey: #F7FAFD;
   --grey: #373737;
   --text: #2D2D2D;
@@ -23,11 +24,13 @@
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 1;
+  font-weight: 300;
 }
 
 .hero {
   background-color: var(--purple);
   height: 100vh;
+  line-height: 1.35;
   color: white;
 }
 
@@ -56,9 +59,9 @@ nav {
 
 button {
   display: flex;
-  padding: 12px 32px;
-  height: 50px;
-  border-radius: 25px;
+  padding: 12px 40px;
+  height: 44px;
+  border-radius: 22px;
   justify-content: center;
   align-items: center;
   outline: none;
@@ -190,4 +193,65 @@ button {
 
 .third {
   background-color: var(--lightPink);
+}
+
+.primaryBtn {
+  background-color: var(--purple);
+  color: white;
+  margin-top: 60px;
+}
+
+.numberContent {
+  flex: 1;
+  align-self: flex-start;
+  line-height: 1.5;
+}
+
+.numberGraphics {
+  flex: 1.5;
+  position: relative;
+  height: 500px;
+  background-image: url("/public/assets/3d-web/numBg.png");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.numberCard {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  padding: 40px;
+  color: white;
+  line-height: 1.25;
+  font-weight: 700;
+  height: 150px;
+  width: 150px;
+  border-radius: 40px;
+  background-color: var(--lightPink);
+  position: absolute;
+  left: 250px;
+  top: 50px;
+}
+
+.secondCard {
+  font-size: 36px;
+  height: 200px;
+  width: 200px;
+  border-radius: 60px;
+  background-color: var(--teal);
+  left: 375px;
+  top: 25px;
+}
+
+.thirdCard {
+  font-size: 36px;
+  height: 200px;
+  width: 200px;
+  border-radius: 60px;
+  background-color: var(--lightBlue);
+  left: 275px;
+  top: 175px;
 }

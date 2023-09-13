@@ -91,6 +91,28 @@ export const Page = () => {
           </li>
         </div>
       </div>
+      <div className={Styles.sectionContainer}>
+        <div className={Styles.numberContent}>
+          <h1>Our Numbers</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+
+          <button className={Styles.primaryBtn}>Lets Talk</button>
+        </div>
+        <div className={Styles.numberGraphics}>
+          <div className={`${Styles.numberCard} `}>300+ Projects</div>
+          <div className={`${Styles.numberCard} ${Styles.secondCard} `}>
+            140K User
+          </div>
+          <div className={`${Styles.numberCard} ${Styles.thirdCard} `}>
+            50M Visits
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
