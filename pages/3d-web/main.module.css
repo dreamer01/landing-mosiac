@@ -12,7 +12,7 @@
   --blue: #92BBFC;
   --lightBlue: #92BBFC95;
   --lightGrey: #F7FAFD;
-  --grey: #373737;
+  --grey: #ECECEC;
   --text: #2D2D2D;
 
   background-color: var(--light);
@@ -40,7 +40,7 @@ header {
   height: 60px;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 120px;
+  padding: 40px 200px;
 }
 
 menubar {
@@ -76,7 +76,7 @@ button {
 .sectionContainer {
   display: flex;
   align-items: center;
-  margin: 40px 120px;
+  margin: 40px 200px;
 }
 
 
@@ -105,7 +105,7 @@ button {
 }
 
 .clients {
-  height: 120px;
+  height: 150px;
   background-color: var(--lightGrey);
 }
 
@@ -138,7 +138,7 @@ button {
 }
 
 .whyView {
-  margin: 180px 120px;
+  margin: 180px 200px;
 }
 
 .whyImgView {
@@ -254,4 +254,44 @@ button {
   background-color: var(--lightBlue);
   left: 275px;
   top: 175px;
+}
+
+.blogView {
+  margin: 200px;
+}
+
+.blogCardView {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-top: 60px;
+}
+
+.blogCard {
+  flex: 1;
+  border-radius: 30px;
+  flex-wrap: wrap;
+  border: 2px solid var(--grey);
+  overflow: hidden;
+}
+
+.blogImg {
+  height: 150px;
+  margin: 20px;
+}
+
+.blogContent {
+  padding: 20px;
+}
+
+.blogMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.subtext {
+  font-size: 14px;
+  line-height: 1.25;
 }
