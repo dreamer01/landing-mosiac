@@ -167,6 +167,17 @@ export const Page = () => {
         <h1>From Blogs</h1>
         <div className={Styles.blogCardView}>{BLOGS.map(renderBlogs)}</div>
       </div>
+      <div className={Styles.contactView}>
+        <h3>Get the best project estimation</h3>
+        <form className={Styles.contactForm}>
+          <input placeholder='Enter your email' /> <button>Send</button>
+        </form>
+        <img className={Styles.mailbox} src='/assets/3d-web/mailbox.png' />
+      </div>
+      <footer>
+        <img className={Styles.logo} src='/s2d-logo.png' />
+        <p>&copy;2023, Pushpendra Singh</p>
+      </footer>
     </div>
   );
 };
