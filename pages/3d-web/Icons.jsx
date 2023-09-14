@@ -50,3 +50,35 @@ export const Time = (props) => (
     />
   </svg>
 );
+
+export const Next = (props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={49}
+    height={49}
+    fill='none'
+    {...props}
+  >
+    <ellipse cx={25} cy={24.5} stroke='#EDEDED' rx={24} ry={23.5} />
+    <path
+      fill='#2D2D2D'
+      d='m26.321 24.5-4.41 4.19a.764.764 0 0 0 0 1.12c.325.309.853.309 1.178 0l5-4.75a.764.764 0 0 0 0-1.12l-5-4.75a.865.865 0 0 0-1.178 0 .764.764 0 0 0 0 1.12l4.41 4.19Z'
+    />
+  </svg>
+);
+
+export const Prev = (props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width={49}
+    height={49}
+    fill='none'
+    {...props}
+  >
+    <ellipse cx={24} cy={23.5} stroke='#EDEDED' rx={24} ry={23.5} />
+    <path
+      fill='#2D2D2D'
+      d='m23.679 24.5 4.41 4.19c.326.31.326.81 0 1.12a.865.865 0 0 1-1.178 0l-5-4.75a.764.764 0 0 1 0-1.12l5-4.75a.865.865 0 0 1 1.178 0c.326.31.326.81 0 1.12l-4.41 4.19Z'
+    />
+  </svg>
+);

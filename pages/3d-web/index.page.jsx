@@ -1,4 +1,6 @@
-import { Calendar, Time } from './Icons';
+import { useState } from 'react';
+
+import { Calendar, Next, Prev, Time } from './Icons';
 import Styles from './main.module.css';
 
 const NAVS = ['Home', 'Service', 'Team', 'Blog', 'Contact'];
@@ -51,9 +53,35 @@ const BLOGS = [
   },
 ];
 
+const TESTIMONIALS = [
+  {
+    id: 1,
+    name: 'Olga Zara',
+    pic: '/assets/neo-brutalism/olga.png',
+    position: 'CBO of Rosey',
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+  },
+  {
+    id: 2,
+    name: 'Yogendra Singh',
+    pic: '/assets/neo-brutalism/mitchell.png',
+    position: 'CEO of Rabta',
+    text: `We are happy to hear you had a positive experience at Noren! We value your input and encourage you to let us know more details about your experience with us.`,
+  },
+  {
+    id: 3,
+    name: 'Christiana Matt',
+    pic: '/assets/neo-brutalism/christina.png',
+    position: 'CMO of Oval',
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+  },
+];
+
 const COLORS = ['#dbedf7', '#f9d27a', '#F990B695'];
 
 export const Page = () => {
+  const [current, setCurrent] = useState(0);
+
   const renderServices = ({ id, title, img, text }) => (
     <section className={Styles.serviceCard} key={id}>
       <img className={Styles.serviceImg} src={img} />
@@ -81,6 +109,21 @@ export const Page = () => {
       </div>
     </div>
   );
+
+  const renderTestimonial = ({ id, name, position, text, pic }) => (
+    <div className={Styles.sayCard} key={id}>
+      <div className={Styles.sayHeader}>
+        <img className={Styles.sayAvatar} src={pic} />
+        <div>
+          <p className={Styles.sayName}>{name}</p>
+          <p className={Styles.sayPosition}>{position}</p>
+        </div>
+      </div>
+      <p className={Styles.sayText}>{text}</p>
+    </div>
+  );
+
+  const isLast = current === TESTIMONIALS.length - 1;
 
   return (
     <div className={Styles.page}>
@@ -167,6 +210,43 @@ export const Page = () => {
         <h1>From Blogs</h1>
         <div className={Styles.blogCardView}>{BLOGS.map(renderBlogs)}</div>
       </div>
+
+      <div className={Styles.sectionContainer}>
+        <div className={Styles.sayView}>
+          <img className={Styles.sayImg} src='/assets/3d-web/testimonial.png' />
+          <h2>What they say?</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum.
+          </p>
+        </div>
+        <div className={Styles.testimonialContent}>
+          <div className={Styles.carouselView}>
+            {renderTestimonial(TESTIMONIALS[current])}
+            {renderTestimonial(TESTIMONIALS[isLast ? 0 : current + 1])}
+          </div>
+          <div>
+            <button
+              style={{ marginBottom: 12 }}
+              onClick={() => {
+                if (current === TESTIMONIALS.length - 1) setCurrent(0);
+                else setCurrent((c) => c + 1);
+              }}
+            >
+              <Next />
+            </button>
+            <button
+              onClick={() => {
+                if (current === 0) setCurrent(TESTIMONIALS.length - 1);
+                else setCurrent((c) => c - 1);
+              }}
+            >
+              <Prev />
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className={Styles.contactView}>
         <h3>Get the best project estimation</h3>
         <form className={Styles.contactForm}>
@@ -174,6 +254,7 @@ export const Page = () => {
         </form>
         <img className={Styles.mailbox} src='/assets/3d-web/mailbox.png' />
       </div>
+
       <footer>
         <img className={Styles.logo} src='/s2d-logo.png' />
         <p>&copy;2023, Pushpendra Singh</p>
