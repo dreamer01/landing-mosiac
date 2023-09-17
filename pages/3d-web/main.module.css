@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+
 
 .page {
   --purple: #6246E4;
@@ -21,7 +22,7 @@
 
 .page>* {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-size: 18px;
   line-height: 1;
   font-weight: 300;
@@ -34,7 +35,7 @@
   color: white;
 }
 
-header {
+.header {
   box-sizing: initial;
   display: flex;
   height: 60px;
@@ -43,7 +44,7 @@ header {
   padding: 40px 200px;
 }
 
-menubar {
+.menubar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -53,11 +54,11 @@ menubar {
   width: 200px;
 }
 
-nav {
+.nav {
   margin-left: 40px;
 }
 
-button {
+.button {
   display: flex;
   padding: 12px 40px;
   height: 44px;
@@ -68,7 +69,7 @@ button {
   border: none;
   background-color: white;
   color: var(--text);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
@@ -374,7 +375,7 @@ button {
   margin-top: 30px;
 }
 
-input {
+.input {
   padding: 12px 40px;
   height: 44px;
   border-radius: 22px;
@@ -382,7 +383,7 @@ input {
   border: none;
   background-color: #ffffff50;
   color: var(--text);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Urbanist', sans-serif;
   font-size: 14px;
   margin-right: 12px;
 }
@@ -394,7 +395,7 @@ input {
   bottom: 25px;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;

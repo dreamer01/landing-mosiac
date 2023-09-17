@@ -128,11 +128,13 @@ export const Page = () => {
   return (
     <div className={Styles.page}>
       <div className={Styles.hero}>
-        <header>
+        <header className={Styles.header}>
           <img className={Styles.logo} src='/s2d-white.png' />
-          <menubar>
+          <menubar className={Styles.menubar}>
             {NAVS.map((title) => (
-              <nav key={title}>{title}</nav>
+              <nav className={Styles.nav} key={title}>
+                {title}
+              </nav>
             ))}
           </menubar>
         </header>
@@ -146,7 +148,7 @@ export const Page = () => {
               marketing services and technology platform.
             </p>
 
-            <button>Get Started</button>
+            <button className={Styles.button}>Get Started</button>
           </div>
           <div className={Styles.heroImgView}>
             <img className={Styles.heroImg} src='/assets/3d-web/heroImg.png' />
@@ -194,7 +196,9 @@ export const Page = () => {
             and scrambled it to make a type specimen book.
           </p>
 
-          <button className={Styles.primaryBtn}>Lets Talk</button>
+          <button className={`${Styles.button} ${Styles.primaryBtn}`}>
+            Lets Talk
+          </button>
         </div>
         <div className={Styles.numberGraphics}>
           <div className={`${Styles.numberCard} `}>300+ Projects</div>
@@ -227,6 +231,7 @@ export const Page = () => {
           </div>
           <div>
             <button
+              className={Styles.button}
               style={{ marginBottom: 12 }}
               onClick={() => {
                 if (current === TESTIMONIALS.length - 1) setCurrent(0);
@@ -236,6 +241,7 @@ export const Page = () => {
               <Next />
             </button>
             <button
+              className={Styles.button}
               onClick={() => {
                 if (current === 0) setCurrent(TESTIMONIALS.length - 1);
                 else setCurrent((c) => c - 1);
@@ -250,12 +256,13 @@ export const Page = () => {
       <div className={Styles.contactView}>
         <h3>Get the best project estimation</h3>
         <form className={Styles.contactForm}>
-          <input placeholder='Enter your email' /> <button>Send</button>
+          <input className={Styles.input} placeholder='Enter your email' />{' '}
+          <button className={Styles.button}>Send</button>
         </form>
         <img className={Styles.mailbox} src='/assets/3d-web/mailbox.png' />
       </div>
 
-      <footer>
+      <footer className={Styles.footer}>
         <img className={Styles.logo} src='/s2d-logo.png' />
         <p>&copy;2023, Pushpendra Singh</p>
       </footer>
