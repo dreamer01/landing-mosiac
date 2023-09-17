@@ -74,7 +74,7 @@
 .hero {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .heroContent {
@@ -116,7 +116,7 @@
 }
 
 .gallery {
-  padding-bottom: 200px;
+  padding: 200px 0px;
 }
 
 .galleryView {
