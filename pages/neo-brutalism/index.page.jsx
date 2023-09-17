@@ -299,3 +299,5 @@ export const Page = () => {
     </div>
   );
 };
+
+export const documentProps = { title: 'Neo Brutalism' };

@@ -58,4 +58,6 @@ const Page = () => {
   );
 };
 
-export { Page };
+const documentProps = { title: 'Landing Mosaic' };
+
+export { Page, documentProps };

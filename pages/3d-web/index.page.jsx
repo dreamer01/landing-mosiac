@@ -269,3 +269,5 @@ export const Page = () => {
     </div>
   );
 };
+
+export const documentProps = { title: '3D Modern Web' };
