@@ -28,7 +28,7 @@ const WHY_US = [
     id: 'experience',
     title: 'Years of Experience',
     highlight: '5+',
-    text: 'Viverra ultricies habitant convallis dui. Sit mauris, tellus nunc sollicitudin consequat sagittis ullamcorper eu. Aenean pretium ac at pulvinar amet.',
+    text: `For the past ten years, we've been dedicated to delivering unmatched design and development services. Our journey has been a testament to our commitment, innovation, and unwavering dedication to our clients.`,
   },
   {
     id: 'clients',
@@ -80,21 +80,21 @@ const TESTIMONIALS = [
     name: 'Olga Zara',
     pic: '/assets/neo-brutalism/olga.png',
     position: 'CBO of Rosey',
-    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders.`,
   },
   {
     id: 2,
     name: 'Yogendra Singh',
     pic: '/assets/neo-brutalism/mitchell.png',
     position: 'CEO of Rabta',
-    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+    text: `We are happy to hear you had a positive experience at Noren! We value your input and encourage you to let us know more details about your experience with us.`,
   },
   {
     id: 3,
     name: 'Christiana Matt',
     pic: '/assets/neo-brutalism/christina.png',
     position: 'CMO of Oval',
-    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders...`,
+    text: `Perfect agency for small businesses who want to grow, but haven't got time to take care of social media. Already seen growth with online orders.`,
   },
 ];
 
@@ -128,8 +128,10 @@ export const Page = () => {
           {tag}
         </span>
         <h3 className={Styles.projectTitle}>{title}</h3>
-        <p className={Styles.subText}>{text}</p>
-        <button className={Styles.seeProjectBtn}>See Full Project </button>
+        <p className={Styles.projectText}>{text}</p>
+        <button className={`${Styles.button} ${Styles.seeProjectBtn}`}>
+          See Full Project
+        </button>
       </div>
       <div
         style={{ boxShadow: `20px 20px ${color}` }}
@@ -146,7 +148,9 @@ export const Page = () => {
         <img className={Styles.profilePic} src={pic} />
       </div>
       <div style={{ flex: 1 }}>
-        <h3 className={Styles.quote}>❝{text}❞</h3>
+        <h3 className={Styles.quote}>
+          ❝<i>{text}</i>❞
+        </h3>
         <div className={Styles.header}>
           <div>
             <p className={Styles.name}>{name}</p>
@@ -181,14 +185,16 @@ export const Page = () => {
     <div className={Styles.page}>
       <main className={Styles.main}>
         <header className={Styles.header}>
-          <img className={Styles.logo} src='./s2d-logo.png' />
+          <a href='/'>
+            <img className={Styles.logo} src='./s2d-logo.png' />
+          </a>
           <menubar>
             <nav className={Styles.active}>Home</nav>
             <nav>Project</nav>
             <nav>Services</nav>
             <nav>About Us</nav>
           </menubar>
-          <button>Contact Us</button>
+          <button className={Styles.button}>Contact Us</button>
         </header>
         <section className={Styles.heroView}>
           <div className={Styles.callout}>
@@ -201,7 +207,7 @@ export const Page = () => {
               Developing and designing the digital solutions, to reach your true
               audience.
             </p>
-            <button className={Styles.primaryBtn}>
+            <button className={`${Styles.button} ${Styles.primaryBtn}`}>
               Get Started
               <img
                 className={Styles.nextIcon}
@@ -249,7 +255,10 @@ export const Page = () => {
           with a different products, target audience and business goal.
         </p>
         {PROJECTS.map(renderProjects)}
-        <button style={{ margin: '50px auto' }} className={Styles.primaryBtn}>
+        <button
+          style={{ margin: '50px auto' }}
+          className={`${Styles.button} ${Styles.primaryBtn}`}
+        >
           See All Projects
           <img
             className={Styles.nextIcon}
@@ -260,6 +269,30 @@ export const Page = () => {
       <div className={Styles.testimonialsView}>
         <h2 className={Styles.heading}>What Our Client Say</h2>
         <div>{renderTestimonial(TESTIMONIALS[current])}</div>
+      </div>
+      <div className={Styles.contact}>
+        <form className={Styles.contactForm}>
+          <h1>Ready to start your project</h1>
+          <input className={Styles.input} placeholder='Name' />
+          <br />
+          <input className={Styles.input} placeholder='Email' />
+          <button type='button' className={Styles.input}>
+            Get Quote
+          </button>
+        </form>
+        <div className={Styles.contactContent}>
+          <p className={Styles.projectText}>
+            Check out the cool work we've done together. Every brand is unique
+            with a different products, target audience and business goal.
+          </p>
+          <button className={`${Styles.button} ${Styles.callBtn}`}>
+            Book a Call
+            <img
+              className={Styles.nextIcon}
+              src='./assets/neo-brutalism/next.png'
+            />
+          </button>
+        </div>
       </div>
       <footer>
         <div className={Styles.footerInfo}>
@@ -287,12 +320,22 @@ export const Page = () => {
             <p>Stay updated</p>
             <div className={Styles.inputView}>
               <input placeholder='Enter your email' />
-              <button className={Styles.subBtn}>Subscribe</button>
+              <button className={`${Styles.button} ${Styles.subBtn}`}>
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
         <div className={Styles.header}>
-          <p>&copy; 2023 Stud2Design. All Rights Reserved. </p>
+          <a className={Styles.credit} href='https://stud2design.in'>
+            &copy; Stud2Design
+          </a>
+          <a
+            className={Styles.credit}
+            href='https://www.behance.net/gallery/177079721/Flowy-Digital-Agency-Landing-Page/modules/1000188899'
+          >
+            Designed By : Akib Tanjil
+          </a>
           <div>Social Icons</div>
         </div>
       </footer>

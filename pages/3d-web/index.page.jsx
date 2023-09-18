@@ -129,7 +129,9 @@ export const Page = () => {
     <div className={Styles.page}>
       <div className={Styles.hero}>
         <header className={Styles.header}>
-          <img className={Styles.logo} src='/s2d-white.png' />
+          <a href='/'>
+            <img className={Styles.logo} src='/s2d-white.png' />
+          </a>
           <menubar className={Styles.menubar}>
             {NAVS.map((title) => (
               <nav className={Styles.nav} key={title}>
@@ -264,7 +266,16 @@ export const Page = () => {
 
       <footer className={Styles.footer}>
         <img className={Styles.logo} src='/s2d-logo.png' />
-        <p>&copy;2023, Pushpendra Singh</p>
+
+        <a
+          className={Styles.credit}
+          href='https://www.behance.net/gallery/103082395/Noren-Landing-page-Free-Download/modules/594121511'
+        >
+          Designed By, Ghassan Hani
+        </a>
+        <a className={Styles.credit} href='https://stud2design.in'>
+          &copy; Stud2Design
+        </a>
       </footer>
     </div>
   );
