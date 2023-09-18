@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Yeseva+One&display=swap');
+
+
+.page {
+  --text: #003049ff;
+  --red: #da2046;
+  --orange: #f77f00ff;
+  --xanthous: #fcbf49ff;
+  --vanilla: #eae2b7ff;
+
+  color: var(--text);
+  background-color: #F9F7F4;
+  min-height: 100vh;
+}
+
+.page>* {
+  box-sizing: border-box;
+  font-family: 'Quattrocento', serif;
+}
+
+
+.main {
+  font-family: 'Quattrocento', serif;
+  margin: 0px 200px;
+  background-color: #F9F7F4;
+  padding-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: white;
+  border: 1.5px solid var(--vanilla);
+  border-radius: 35px;
+}
+
+.flex {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 32px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Yeseva One', serif;
+  color: var(--red);
+  margin: 0px;
+  padding-left: 12px;
+}
+
+.s2dLogo {
+  width: 200px;
+  height: auto;
+}
+
+.aboutLink {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--red);
+}
+
+.aboutLink:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-family: 'Yeseva One', serif;
+  margin-top: 60px;
+}
