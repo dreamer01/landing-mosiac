@@ -1,3 +1,4 @@
+import Image from '../../components/Image';
 import Styles from './main.module.css';
 
 const Page = () => {
@@ -26,18 +27,32 @@ const Page = () => {
             </p>
           </div>
           <div className={Styles.heroImgView}>
-            <img className={Styles.heroImg} src='/pattern.png' />
+            <Image
+              className={Styles.heroImg}
+              placeholder='/pattern-small.png'
+              src='/pattern.png'
+            />
           </div>
         </section>
 
         <section className={Styles.gallery}>
           <div className={Styles.galleryView}>
             <a className={Styles.card} href='/neo-brutalism'>
-              <img className={Styles.siteSnapshot} src='/neo-seo.png' />
+              <Image
+                loading='lazy'
+                className={Styles.siteSnapshot}
+                placeholder='/neo-seo-small.png'
+                src='/neo-seo.png'
+              />
               <div className={Styles.siteMeta}>Neo Brutalism</div>
             </a>
             <a className={Styles.card} href='/3d-web'>
-              <img className={Styles.siteSnapshot} src='/3d-seo.png' />
+              <Image
+                loading='lazy'
+                className={Styles.siteSnapshot}
+                placeholder='/3d-seo-small.png'
+                src='/3d-seo.png'
+              />
               <div className={Styles.siteMeta}>3D Modern Web</div>
             </a>
           </div>
