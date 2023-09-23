@@ -86,6 +86,9 @@
   font-family: 'Yeseva One', serif;
   margin-bottom: 0px;
   font-size: 64px;
+  background: -webkit-linear-gradient(#da2046, #003049ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heroImgView {
