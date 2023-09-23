@@ -343,4 +343,6 @@ export const Page = () => {
   );
 };
 
-export const documentProps = { title: 'Neo Brutalism' };
+export const documentProps = {
+  title: 'Neo Brutalism | Landing Mosaic | Stud2Design',
+};

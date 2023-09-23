@@ -55,6 +55,15 @@ const Page = () => {
               />
               <div className={Styles.siteMeta}>3D Modern Web</div>
             </a>
+            <a className={Styles.card} href='/dark'>
+              <Image
+                loading='lazy'
+                className={Styles.siteSnapshot}
+                placeholder='/dark-seo-small.png'
+                src='/dark-seo.png'
+              />
+              <div className={Styles.siteMeta}>Dark Modern</div>
+            </a>
           </div>
         </section>
       </main>

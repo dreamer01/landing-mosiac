@@ -281,4 +281,6 @@ export const Page = () => {
   );
 };
 
-export const documentProps = { title: '3D Modern Web' };
+export const documentProps = {
+  title: '3D Modern Web | Landing Mosaic | Stud2Design',
+};

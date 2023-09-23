@@ -124,11 +124,13 @@
 
 .galleryView {
   display: flex;
+  flex-wrap: wrap;
   gap: 100px;
 }
 
 .card {
   flex: 1;
+  min-width: 400px;
   border-radius: 10px;
   border: 1.5px solid var(--vanilla);
   overflow: hidden;
