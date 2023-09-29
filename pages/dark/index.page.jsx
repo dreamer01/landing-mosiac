@@ -1,6 +1,54 @@
 import Styles from './main.module.css';
 
+const SERVICES = [
+  {
+    id: 'branding',
+    title: 'Branding',
+    text: 'Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices',
+    img: '/assets/dark/brand.png',
+  },
+  {
+    id: 'dev',
+    title: 'Web Development',
+    text: 'Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices',
+    img: '/assets/dark/dev.png',
+  },
+
+  {
+    id: 'marketing',
+    title: 'Digital Marketing',
+    text: 'Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices',
+    img: '/assets/dark/market.png',
+  },
+  {
+    id: 'mobile',
+    title: 'Mobile App',
+    text: 'Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices',
+    img: '/assets/dark/mobile.png',
+  },
+  {
+    id: 'seo',
+    title: 'SEO',
+    text: 'Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices',
+    img: '/assets/dark/seo.png',
+  },
+  {
+    id: 'testing',
+    title: 'User Testing',
+    text: 'Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices',
+    img: '/assets/dark/testing.png',
+  },
+];
+
 export const Page = () => {
+  const renderServices = ({ id, img, title, text }) => (
+    <div className={Styles.serviceCard} key={id}>
+      <img className={Styles.serviceIcon} src={img} />
+      <h3 className={Styles.serviceTitle}>{title}</h3>
+      <p className={Styles.serviceText}>{text}</p>
+    </div>
+  );
+
   return (
     <div className={Styles.page}>
       <main className={Styles.hero}>
@@ -45,8 +93,29 @@ export const Page = () => {
         <p className={`${Styles.accentText} ${Styles.sectionSubtext}`}>
           Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
           feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat
-          magna semper orci a tincidunt.{' '}
+          magna semper orci a tincidunt.
         </p>
+        <div className={Styles.servicesView}>
+          {SERVICES.map(renderServices)}
+        </div>
+      </div>
+      <div className={Styles.whyView}>
+        <div style={{ flex: 1, textAlign: 'center' }}>
+          <img
+            className={Styles.searchingImg}
+            src='/assets/dark/searching.png'
+          />
+        </div>
+        <div style={{ flex: 1 }}>
+          <h2 className={Styles.sectionHeading}>Why Choose Us</h2>
+          <p className={Styles.accentText}>
+            Commodo diam vulputate dui proin quis enim nibh. Non integer ac
+            libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu
+            elit. Morbi aliquam porttitor mattis consequat neque, tellus
+            blandit.
+          </p>
+          <button className={Styles.btn}>Lets Connect</button>
+        </div>
       </div>
     </div>
   );
