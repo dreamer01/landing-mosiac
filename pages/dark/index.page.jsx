@@ -64,13 +64,9 @@ export const Page = () => {
       {/* <img className={Styles.serviceIcon} src={cover} /> */}
       {cover && <div className={Styles.cover}></div>}
       <p className={Styles.tag}>{tag}</p>
-      <h3 style={{ marginBottom: 0 }} className={Styles.serviceTitle}>
-        {title}
-      </h3>
+      <h3 className={Styles.serviceTitle}>{title}</h3>
       <div className={Styles.readMore}>
-        <p style={{ marginBottom: 0 }} className={Styles.accentText}>
-          Read More
-        </p>
+        <span className={Styles.accentText}>Read More</span>
         <Next style={{ marginLeft: 12 }} />
       </div>
     </div>
@@ -159,6 +155,24 @@ export const Page = () => {
         </div>
         <div className={Styles.projectList}>
           {PROJECTS.slice(3).map(renderProjects)}
+        </div>
+      </div>
+      <div className={Styles.contact}>
+        <h2 className={Styles.sectionHeading}>Let’s discuss the idea</h2>
+        <p className={Styles.contactText}>
+          Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
+          feugiat scelerisque in elit.{' '}
+        </p>
+        <div className={`${Styles.inlineView} ${Styles.inputBox}`}>
+          <input
+            placeholder='Enter Email'
+            className={`${Styles.input} ${Styles.textBox} ${Styles.contactInput} `}
+          />
+          <button
+            className={`${Styles.input} ${Styles.button} ${Styles.contactBtn}`}
+          >
+            Send
+          </button>
         </div>
       </div>
     </div>

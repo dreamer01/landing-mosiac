@@ -176,6 +176,7 @@
   background-color: var(--yellow);
   text-transform: uppercase;
   font-family: 'AgrandirBold', serif;
+  cursor: pointer;
 }
 
 .heading {
@@ -300,4 +301,34 @@
 .readMore {
   display: flex;
   align-items: center;
+}
+
+.contact {
+  background-color: var(--yellow);
+  padding: 80px 120px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--black);
+}
+
+.contactText {
+  margin: 0px;
+  margin-top: 16px;
+  width: 40%;
+  font-weight: 100;
+  color: var(--darkGrey);
+}
+
+.contactInput {
+  background-color: white;
+  border-color: var(--accent);
+  color: var(--darkGrey);
+}
+
+.contactBtn {
+  margin-left: 36px;
+  background-color: var(--black);
+  color: white;
 }
