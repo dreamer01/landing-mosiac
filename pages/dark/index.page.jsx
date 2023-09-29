@@ -1,3 +1,4 @@
+import { Next } from './Icons';
 import Styles from './main.module.css';
 
 const SERVICES = [
@@ -40,12 +41,38 @@ const SERVICES = [
   },
 ];
 
+const PROJECTS = [
+  { id: 1, title: 'Creative landing page', tag: 'Website', cover: 'Yes' },
+  { id: 2, title: 'Creative Branding', tag: 'Branding', cover: '' },
+  { id: 3, title: 'Deploy now with one click', tag: 'Development', cover: '' },
+  { id: 4, title: 'User data for growth', tag: 'Marketing', cover: '' },
+  { id: 5, title: 'How We Optimized Our SEO', tag: 'SEO', cover: 'Yes' },
+  { id: 6, title: 'A cozy travel experience', tag: 'Mobile', cover: '' },
+];
+
 export const Page = () => {
   const renderServices = ({ id, img, title, text }) => (
     <div className={Styles.serviceCard} key={id}>
       <img className={Styles.serviceIcon} src={img} />
       <h3 className={Styles.serviceTitle}>{title}</h3>
       <p className={Styles.serviceText}>{text}</p>
+    </div>
+  );
+
+  const renderProjects = ({ id, cover, tag, title }) => (
+    <div className={Styles.serviceCard} key={id}>
+      {/* <img className={Styles.serviceIcon} src={cover} /> */}
+      {cover && <div className={Styles.cover}></div>}
+      <p className={Styles.tag}>{tag}</p>
+      <h3 style={{ marginBottom: 0 }} className={Styles.serviceTitle}>
+        {title}
+      </h3>
+      <div className={Styles.readMore}>
+        <p style={{ marginBottom: 0 }} className={Styles.accentText}>
+          Read More
+        </p>
+        <Next style={{ marginLeft: 12 }} />
+      </div>
     </div>
   );
 
@@ -115,6 +142,23 @@ export const Page = () => {
             blandit.
           </p>
           <button className={Styles.btn}>Lets Connect</button>
+        </div>
+      </div>
+      <div className={Styles.projects}>
+        <div className={Styles.projectContent}>
+          <h2>Some pieces of our work</h2>
+          <p className={Styles.accentText}>
+            Risus commodo id odio turpis pharetra elementum. Pulvinar porta
+            porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros
+            consequat magna semper orci a tincidunt.{' '}
+          </p>
+          <button className={Styles.btn}>Show More</button>
+        </div>
+        <div className={Styles.projectList}>
+          {PROJECTS.slice(0, 3).map(renderProjects)}
+        </div>
+        <div className={Styles.projectList}>
+          {PROJECTS.slice(3).map(renderProjects)}
         </div>
       </div>
     </div>
