@@ -158,23 +158,62 @@ export const Page = () => {
         </div>
       </div>
       <div className={Styles.contact}>
-        <h2 className={Styles.sectionHeading}>Let’s discuss the idea</h2>
-        <p className={Styles.contactText}>
-          Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
-          feugiat scelerisque in elit.{' '}
-        </p>
-        <div className={`${Styles.inlineView} ${Styles.inputBox}`}>
-          <input
-            placeholder='Enter Email'
-            className={`${Styles.input} ${Styles.textBox} ${Styles.contactInput} `}
-          />
-          <button
-            className={`${Styles.input} ${Styles.button} ${Styles.contactBtn}`}
-          >
-            Send
-          </button>
+        <div className={Styles.contactView}>
+          <h2 className={Styles.sectionHeading}>Let’s discuss the idea</h2>
+          <p className={Styles.contactText}>
+            Risus commodo id odio turpis pharetra elementum. Pulvinar porta
+            porta feugiat scelerisque in elit.{' '}
+          </p>
+          <div className={`${Styles.inlineView} ${Styles.inputBox}`}>
+            <input
+              placeholder='Enter Email'
+              className={`${Styles.input} ${Styles.textBox} ${Styles.contactInput} `}
+            />
+            <button
+              className={`${Styles.input} ${Styles.button} ${Styles.contactBtn}`}
+            >
+              Send
+            </button>
+          </div>
         </div>
       </div>
+      <footer className={Styles.footer}>
+        <div className={Styles.footerCol}>
+          Company
+          <p className={Styles.accentText}>About Us</p>
+          <p className={Styles.accentText}>Team</p>
+          <p className={Styles.accentText}>Careers</p>
+        </div>
+        <div className={Styles.footerCol}>
+          Services
+          <p className={Styles.accentText}>Branding</p>
+          <p className={Styles.accentText}>Web Development</p>
+          <p className={Styles.accentText}>Digital Marketing</p>
+          <p className={Styles.accentText}>Mobile App</p>
+          <p className={Styles.accentText}>SEO</p>
+        </div>
+        <div className={Styles.footerCol}>
+          Resources
+          <p className={Styles.accentText}>Blog</p>
+          <p className={Styles.accentText}>Case Study</p>
+          <p className={Styles.accentText}>Testimonial</p>
+        </div>
+        <div className={Styles.footerCol}>
+          Follow Us
+          <p className={Styles.accentText}>Twitter</p>
+          <p className={Styles.accentText}>LinkedIn</p>
+          <p className={Styles.accentText}>Instagram</p>
+        </div>
+        <div style={{ flex: 2 }}>
+          <img className={Styles.logo} src='/s2d-white.png' />
+          <p className={Styles.accentText}>Get latest updates</p>
+
+          <input
+            placeholder='Enter Email'
+            className={`${Styles.input} ${Styles.textBox}`}
+          />
+        </div>
+      </footer>
     </div>
   );
 };
