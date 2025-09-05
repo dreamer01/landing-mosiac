@@ -20,6 +20,24 @@ async function render(pageContext: PageContextServer) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>${title}</title>
+        <script>
+          // Disable scroll restoration immediately, before any other scripts load
+          if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+          }
+          // Force scroll to top on page load
+          window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+          });
+          // Also scroll to top immediately
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+              window.scrollTo(0, 0);
+            });
+          } else {
+            window.scrollTo(0, 0);
+          }
+        </script>
         <style>
           /* Prevent flicker during hydration */
           #page-view { opacity: 0; }

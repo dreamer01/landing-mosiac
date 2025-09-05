@@ -16,6 +16,12 @@ async function render(pageContext: PageContextClient) {
   const { Page, pageProps } = pageContext;
   const page = <Page {...pageProps} />;
   const container = document.getElementById('page-content')!;
+
+  // For navigation (not initial hydration), scroll to top
+  if (!pageContext.isHydration) {
+    window.scrollTo(0, 0);
+  }
+
   if (pageContext.isHydration) {
     root = ReactDOM.hydrateRoot(container, page);
   } else {
