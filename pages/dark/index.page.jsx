@@ -157,6 +157,9 @@ export const Page = () => {
           {PROJECTS.slice(3).map(renderProjects)}
         </div>
       </div>
+      <div className={Styles.testimonial}>
+        <h3>Hear what our customers say :)</h3>
+      </div>
       <div className={Styles.contact}>
         <div className={Styles.contactView}>
           <h2 className={Styles.sectionHeading}>Let’s discuss the idea</h2>

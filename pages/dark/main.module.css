@@ -303,6 +303,11 @@
   align-items: center;
 }
 
+.testimonial {
+  background-color: var(--black);
+  padding: 80px 120px;
+}
+
 .contact {
   background-color: var(--darkGrey);
   padding: 80px 120px;

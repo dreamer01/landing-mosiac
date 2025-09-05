@@ -1,6 +1,6 @@
 import React from 'react';
-import { renderToStream } from 'react-streaming/server';
-import { escapeInject } from 'vite-plugin-ssr/server';
+import { renderToString } from 'react-dom/server';
+import { escapeInject } from 'vike/server';
 
 import { getPageTitle } from './getPageTitle';
 import type { PageContextServer } from './types';
@@ -10,9 +10,7 @@ const passToClient = ['pageProps', 'documentProps', 'someAsyncProps'];
 async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext;
 
-  const stream = await renderToStream(<Page {...pageProps} />, {
-    disable: true,
-  });
+  const pageHtml = renderToString(<Page {...pageProps} />);
 
   const title = getPageTitle(pageContext);
 
@@ -22,9 +20,18 @@ async function render(pageContext: PageContextServer) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>${title}</title>
+        <style>
+          /* Prevent flicker during hydration */
+          #page-view { opacity: 0; }
+          .hydrated #page-view { opacity: 1; transition: opacity 0.2s ease-in-out; }
+        </style>
       </head>
       <body>
-        <div id="page-view">${stream}</div>
+        <div id="page-container">
+          <div id="page-view">
+            <div id="page-content">${pageHtml}</div>
+          </div>
+        </div>
       </body>
     </html>`;
 
