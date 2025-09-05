@@ -186,7 +186,12 @@ export const Page = () => {
       <main className={Styles.main}>
         <header className={Styles.header}>
           <a href='/'>
-            <img className={Styles.logo} src='./s2d-logo.png' />
+            <span
+              className={Styles.logo}
+              style={{ color: '#4239f4', fontWeight: 'bold', fontSize: '24px' }}
+            >
+              Bytes & Pixels
+            </span>
           </a>
           <menubar>
             <nav className={Styles.active}>Home</nav>
@@ -297,7 +302,12 @@ export const Page = () => {
       <footer>
         <div className={Styles.footerInfo}>
           <div style={{ flex: 1 }}>
-            <img className={Styles.logo} src='./s2d-white.png' />
+            <span
+              className={Styles.logo}
+              style={{ color: 'white', fontWeight: 'bold', fontSize: '24px' }}
+            >
+              Bytes & Pixels
+            </span>
             <p className={Styles.footerText}>
               We help the most exciting brands unlock growth through carefully
               crafted paid media campaigns and digital experiences
@@ -328,7 +338,7 @@ export const Page = () => {
         </div>
         <div className={Styles.header}>
           <a className={Styles.credit} href='https://stud2design.in'>
-            &copy; Stud2Design
+            &copy; BytznPxls
           </a>
           <a
             className={Styles.credit}
@@ -344,5 +354,5 @@ export const Page = () => {
 };
 
 export const documentProps = {
-  title: 'Neo Brutalism | Landing Mosaic | Stud2Design',
+  title: 'Neo Brutalism | Landing Mosaic | BytznPxls',
 };

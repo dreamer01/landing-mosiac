@@ -55,6 +55,6 @@ const Page = () => {
   );
 };
 
-const documentProps = { title: 'About | Landing Mosaic | Stud2Design' };
+const documentProps = { title: 'About | Landing Mosaic | BytznPxls' };
 
 export { Page, documentProps };

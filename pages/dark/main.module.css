@@ -69,7 +69,9 @@
 }
 
 .logo {
-  width: 200px;
+  width: auto;
+  text-decoration: none;
+  font-family: inherit;
 }
 
 .nav {

@@ -130,7 +130,12 @@ export const Page = () => {
       <div className={Styles.hero}>
         <header className={Styles.header}>
           <a href='/'>
-            <img className={Styles.logo} src='/s2d-white.png' />
+            <span
+              className={Styles.logo}
+              style={{ color: 'white', fontWeight: 'bold', fontSize: '24px' }}
+            >
+              Bytes & Pixels
+            </span>
           </a>
           <menubar className={Styles.menubar}>
             {NAVS.map((title) => (
@@ -143,7 +148,7 @@ export const Page = () => {
         <div className={Styles.sectionContainer}>
           <div className={Styles.contentView}>
             <h1 className={Styles.heroHeading}>
-              Get business solution with Stud2Design.
+              Get business solution with BytznPxls.
             </h1>
             <p className={Styles.heroText}>
               Power your business to new heights with our award-winning digital
@@ -265,7 +270,12 @@ export const Page = () => {
       </div>
 
       <footer className={Styles.footer}>
-        <img className={Styles.logo} src='/s2d-logo.png' />
+        <span
+          className={Styles.logo}
+          style={{ color: '#4239f4', fontWeight: 'bold', fontSize: '24px' }}
+        >
+          Bytes & Pixels
+        </span>
 
         <a
           className={Styles.credit}
@@ -274,7 +284,7 @@ export const Page = () => {
           Designed By, Ghassan Hani
         </a>
         <a className={Styles.credit} href='https://stud2design.in'>
-          &copy; Stud2Design
+          &copy; BytznPxls
         </a>
       </footer>
     </div>
@@ -282,5 +292,5 @@ export const Page = () => {
 };
 
 export const documentProps = {
-  title: '3D Modern Web | Landing Mosaic | Stud2Design',
+  title: '3D Modern Web | Landing Mosaic | BytznPxls',
 };

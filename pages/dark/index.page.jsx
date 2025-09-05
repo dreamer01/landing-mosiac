@@ -77,7 +77,12 @@ export const Page = () => {
       <main className={Styles.hero}>
         <header className={Styles.header}>
           <a href='/'>
-            <img className={Styles.logo} src='/s2d-white.png' />
+            <span
+              className={Styles.logo}
+              style={{ color: 'white', fontWeight: 'bold', fontSize: '24px' }}
+            >
+              Bytes & Pixels
+            </span>
           </a>
           <menubar className={Styles.inlineView}>
             <nav className={Styles.nav}>Company</nav>
@@ -208,7 +213,12 @@ export const Page = () => {
           <p className={Styles.accentText}>Instagram</p>
         </div>
         <div style={{ flex: 2 }}>
-          <img className={Styles.logo} src='/s2d-white.png' />
+          <span
+            className={Styles.logo}
+            style={{ color: 'white', fontWeight: 'bold', fontSize: '24px' }}
+          >
+            Bytes & Pixels
+          </span>
           <p className={Styles.accentText}>Get latest updates</p>
 
           <input
@@ -222,5 +232,5 @@ export const Page = () => {
 };
 
 export const documentProps = {
-  title: 'Dark Landing Page | Landing Mosaic | Stud2Design',
+  title: 'Dark Landing Page | Landing Mosaic | BytznPxls',
 };
